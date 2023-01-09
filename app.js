@@ -68,8 +68,8 @@ function dataUsage(planLimit, day, usage) {
   const projectedUsage = usageUsed * dayPeriod;
   const remainingDifference = projectedUsage - planLimit;
   const remainingData = planLimit - usage;
-  const gbPerDay = usageUsed - remainingData / daysRemaining;
   const daysRemaining = dayPeriod - day;
+  const gbPerDay = usageUsed - remainingData / daysRemaining;
   const expectedAvgUse = planLimit / dayPeriod;
   if (remainingData == 0) {
     console.log("no more data");
